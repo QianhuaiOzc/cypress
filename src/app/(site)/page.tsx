@@ -1,88 +1,45 @@
 import TitleSection from '@/components/landing-page/title-section';
-import { Button } from '@/components/ui/button';
+import {Button} from '@/components/ui/button';
 import Image from 'next/image';
 import React from 'react';
 import Banner from '../../../public/appBanner.png';
 import Cal from '../../../public/cal.png';
 import Diamond from '../../../public/icons/diamond.svg';
 import CheckIcon from '../../../public/icons/check.svg';
-import { CLIENTS, PRICING_CARDS, PRICING_PLANS, USERS } from '@/lib/constants';
-import { randomUUID } from 'crypto';
-import { twMerge } from 'tailwind-merge';
+import {CLIENTS, PRICING_CARDS, PRICING_PLANS, USERS} from '@/lib/constants';
+import {randomUUID} from 'crypto';
+import {twMerge} from 'tailwind-merge';
 import clsx from 'clsx';
 import CustomCard from '@/components/landing-page/custom-card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { CardContent, CardDescription, CardTitle } from '@/components/ui/card';
+import {Avatar, AvatarFallback, AvatarImage} from '@/components/ui/avatar';
+import {CardContent, CardDescription, CardTitle} from '@/components/ui/card';
 
 const HomePage = () => {
     return (
         <>
             <section
-                className=" overflow-hidden
-      px-4
-      sm:px-6
-      mt-10
-      sm:flex
-      sm:flex-col
-      gap-4
-      md:justify-center
-      md:items-center"
+                className=" overflow-hidden px-4 sm:px-6 mt-10 sm:flex sm:flex-col gap-4 md:justify-center md:items-center"
             >
                 <TitleSection
                     pill="✨ Your Workspace, Perfected"
                     title="All-In-One Collaboration and Productivity Platform"
                 />
                 <div
-                    className="bg-white
-          p-[2px]
-          mt-6
-          rounded-xl
-          bg-gradient-to-r
-          from-primary
-          to-brand-primaryBlue
-          sm:w-[300px]
-        "
-                >
+                    className="bg-white p-[2px] mt-6 rounded-xl bg-gradient-to-r from-primary to-brand-primaryBlue sm:w-[300px]">
                     <Button
                         variant="btn-secondary"
-                        className=" w-full
-            rounded-[10px]
-            p-6
-            text-2xl
-            bg-background
-          "
-                    >
+                        className=" w-full rounded-[10px] p-6 text-2xl bg-background">
                         Get Cypress Free
                     </Button>
                 </div>
                 <div
-                    className="md:mt-[-90px]
-          sm:w-full
-          w-[750px]
-          flex
-          justify-center
-          items-center
-          mt-[-40px]
-          relative
-          sm:ml-0
-          ml-[-50px]
-        "
-                >
+                    className="md:mt-[-90px]  sm:w-full  w-[750px]  flex  justify-center  items-center  mt-[-40px]  relative  sm:ml-0  ml-[-50px]">
                     <Image
                         src={Banner}
                         alt="Application Banner"
                     />
                     <div
-                        className="bottom-0
-            top-[50%]
-            bg-gradient-to-t
-            dark:from-background
-            left-0
-            right-0
-            absolute
-            z-10
-          "
-                    ></div>
+                        className="bottom-0  top-[50%]  bg-gradient-to-t  dark:from-background  left-0  right-0  absolute  z-10"></div>
                 </div>
             </section>
             <section className="relative">
@@ -250,7 +207,7 @@ const HomePage = () => {
                   "
                                         >
                                             <Avatar>
-                                                <AvatarImage src={`/avatars/${index + 1}.png`} />
+                                                <AvatarImage src={`/avatars/${index + 1}.png`}/>
                                                 <AvatarFallback>AV</AvatarFallback>
                                             </Avatar>
                                             <div>
